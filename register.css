@@ -1,0 +1,433 @@
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(esusuimages/save8.jpg);
+    background-size: cover;
+    height: 100px;
+    
+}
+
+
+
+.selector {
+    width: 250px;
+    Height: 40px;
+    border: 0px;
+    border-bottom: 2px solid #ED4F13;
+    border-radius: 3px;
+    font: normal normal 13px/normal "Raleway", Helvetica, sans-serif;
+    
+  }
+  
+  .bootan {
+   box-shadow:none;
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 210px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid #ED4F13;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal normal 13px/normal "Raleway", Helvetica, sans-serif;
+    color: #fff;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #ED4F13;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  
+  .bootan:hover {
+    box-shadow:none;
+    border: 2px solid #ED4F13;
+    color: #ED4F13;
+    background: #fff;
+  }
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.text {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+.text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 65px;
+}
+
+.text {
+  position: absolute;
+  width: 450px;
+  left: 50%;
+  margin-left: -300px;
+  height: 40px;
+  margin-top: -20px;
+}
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 450px;
+  opacity: 0;
+}
+
+.letter {
+  display: block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.42s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #c0392b;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: #1e79d4;
+}
+
+
+
+
+
+/*
+Container div
+*/
+
+div.container {
+    margin: 4em auto 2em auto;
+    padding: 1em;
+    overflow: hidden;
+    border: 2px solid black;
+    margin-right: 10px;
+}
+
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+
+
+#about {
+    top: 20px;
+    background-color: #4CAF50;
+}
+
+#blog {
+    top: 80px;
+    background-color: #2196F3;
+}
+
+#projects {
+    top: 140px;
+    background-color: #f44336;
+}
+
+#contact {
+    top: 200px;
+    background-color: #555
+}
+
+/*
+
+Styles for form fields
+
+*/
+
+div.container label,
+div.container input,
+div.container button {
+    display: block;
+    width: 80%;
+    font-size: 1em;
+}
+
+div.container label {
+    margin: 0.5em auto 0.5em auto;
+}
+
+div.container input {
+    padding: 0.8em 0 0.8em 0.8em;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 0.5em auto 0.5em auto;
+}
+
+div.container button {
+    outline: none;
+    margin: 2em auto 1em auto;
+    padding: 1.2em;
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 2px 2px #888;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/*
+
+tab styles
+
+*/
+
+.tab {
+    margin: 0 auto 0 auto;
+    display: flex;
+    width: 100%;
+}
+
+.tablinks {
+    padding: 1em 0 1em 0;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    border: 0.4px solid black;
+    transition: all 0.2s linear;
+}
+
+.active {
+    animation-name: activetab;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    background-color: black;
+    color: white;
+}
+
+@keyframes activetab {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.tabcontent {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    display: none;
+    padding: 2em 0 2em 0;
+    overflow: hidden;
+}
+
+
+/*
+
+device specific styles
+
+*/
+
+@media only screen and (min-width: 1224px) {
+    div.container {
+        overflow: hidden;
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1824px) {
+    div.container {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    div.container {
+        width: 80%;
+    }
+}
+
+li :hover > ul.drop-menu.menu-join li
+    opacity: 0
+    animation:
+        name: menujoin
+        duration: 300ms
+        timing-function: ease-in-out
+        fill-mode: foward
+    @keyframes menujoin
+    0%
+
+    transition: rotateY()
+    
+    opacity: 0
+    100%
+
+    opacity: 1
+
+/*
+ul{
+    background-color: lightseagreen;
+    height: 80px;
+    font-size: 22px;
+    margin-bottom: 0px;
+    
+    
+}
+li{
+    display: inline-block;
+        
+}
+
+.all{
+   padding: 30px;
+   margin-right: 5px;
+   
+
+}
+
+.all:hover{
+    background-color: cadetblue;
+    transform: translate(-50,-50);
+    
+}
+
+.cover{
+    background-size: cover;
+}
+
+.loginpage{
+    width: 360px;
+    padding: 15% 0 0;
+    margin: auto;
+}
+
+form{
+    position: relative;
+    z-index: 1;
+    background: rgba(219, 212, 212, 0);
+    max-width: 360px;
+    top: 50%;
+    bottom: 50%;
+    margin: 0 auto 100px;
+    padding: 50px;
+    text-align: centre;
+    width: 480px;
+}
+
+.form .head{
+    width: 100%;
+    height: 55px;
+    display: flex;
+}
+
+.form .head > div{
+    width: 50%;
+    height: 100%;
+    text-align: centre;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.form .head .signup > div:nth-child(1), .form .head > div:nth-child(2) {
+    background: rgba(119, 112, 78, 0.822);
+    transition: all .3s ease-in-out;
+}
+
+.form .head .signup > div :nth-child(2) {
+    background: transparent !important;
+    transition: all .3s ease-in-out;
+}
+
+
+.form input{
+    font-family: fantasy;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.form button{
+    font-family: fantasy;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form button:hover, .form button:active{
+    background: #43Af50
+}
+
+.form .message{
+    margin: 15px 0 0;
+    color: darkcyan;
+    font-size: 14px;
+}
+
+.form{
+    margin-right: 60px;
+    margin-bottom: 200px
+}
+
+.loginpage{
+    float: right;
+}
+*/

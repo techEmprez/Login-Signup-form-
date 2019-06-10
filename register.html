@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOGIN/REGISTRATION FORM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" a href="register.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+</head>
+
+<body>
+    
+    <div id="mySidenav" class="sidenav">
+        
+        <a href="#" id="about">Home</a>
+        <a href="#" id="blog">About Us</a>
+        <a href="#" id="projects">Services</a>
+        <a href="#" id="contact">Contact</a>
+
+    </div>
+
+    <div class="text">
+        <p>Save Today For:</p>
+        <p>
+            <span class="word wisteria">Emergencies</span>
+            <span class="word belize">Retirement</span>
+            <span class="word pomegranate">Education</span>
+            <span class="word green">Vacation</span>
+            <span class="word midnight">The Future</span>
+        </p>
+    </div>
+
+
+    <div class="container">
+        <div class="tab">
+            <div class="tablinks" id="logintab" data-form-id="login">Login</div>
+            <div class="tablinks" id="signuptab" data-form-id="signup">Sign up</div>
+        </div>
+        <div class="tabcontent" id="login">
+            <form method="POST">
+                <label for="loginusername">Username:</label>
+                <input required type="username" id="text" name="username placeholder=" Username" />
+                <label for="loginPassword">Password:</label>
+                <input required type="password" id="loginPassword" name="password" placeholder="**********" />
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="tabcontent" id="signup">
+            <form method="POST">
+                <label for="signupEmail">Username:</label>
+                <input required type="text" id="username" placeholder="Username" name="username" />
+
+                <label for="signupPassword">Name:</label>
+                <input required type="text" id="Name" placeholder="Name" name="name" />
+
+                <label for="Password">Password:</label>
+                <input required type="password" id="Passsword" placeholder="*******" name="password" />
+
+                <div align="center">
+                    <select name="mySelectbox" class="selector">
+                        <option value="">Would you like to Join...</option>
+                        <option value="/mobilebillboardsinalabama">Group Savings</option>
+                        <option value="/arizona">Personal Savings</option>
+                        <option value="/arkansas">Both</option>
+                    </select>
+
+
+                    <a href="loading.html"><button type="submit" name="submit">Sign up</button></a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.querySelectorAll("div.tablinks");
+
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].onclick = function (e) {
+                openForm(e.target.getAttribute('data-form-id'), e.target.getAttribute('id'));
+            }
+        }
+
+        function openForm(formid, tabid) {
+            var tabcontent = document.querySelectorAll("div.tabcontent");
+            var links = document.querySelectorAll("div.tablinks");
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(formid).style.display = "block";
+            document.getElementById(tabid).classList.add("active");
+        }
+        document.getElementById("logintab").click();
+
+            // JS FOR TYPEWRITER //
+        var words = document.getElementsByClassName('word');
+        var wordArray = [];
+        var currentWord = 0;
+
+        words[currentWord].style.opacity = 1;
+        for (var i = 0; i < words.length; i++) {
+            splitLetters(words[i]);
+        }
+
+
+        
+
+        function changeWord() {
+            var cw = wordArray[currentWord];
+            var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+            for (var i = 0; i < cw.length; i++) {
+                animateLetterOut(cw, i);
+            }
+
+            for (var i = 0; i < nw.length; i++) {
+                nw[i].className = 'letter behind';
+                nw[0].parentElement.style.opacity = 1;
+                animateLetterIn(nw, i);
+            }
+
+            currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
+        }
+
+        function animateLetterOut(cw, i) {
+            setTimeout(function () {
+                cw[i].className = 'letter out';
+            }, i * 80);
+        }
+
+        function animateLetterIn(nw, i) {
+            setTimeout(function () {
+                nw[i].className = 'letter in';
+            }, 340 + (i * 80));
+        }
+
+        function splitLetters(word) {
+            var content = word.innerHTML;
+            word.innerHTML = '';
+            var letters = [];
+            for (var i = 0; i < content.length; i++) {
+                var letter = document.createElement('span');
+                letter.className = 'letter';
+                letter.innerHTML = content.charAt(i);
+                word.appendChild(letter);
+                letters.push(letter);
+            }
+
+            wordArray.push(letters);
+        }
+
+        changeWord();
+        setInterval(changeWord, 2000);
+        delay(7000);
+
+
+    </script>
+
+</body>
+
+</html>
